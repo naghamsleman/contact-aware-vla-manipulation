@@ -70,4 +70,5 @@ When these components are allowed to interact, the system is less likely to accu
 
 
 
-Detailed analysis of the reviewed papers is provided in `paper_analysis.md`.
+For detailed analysis and references, see `paper_analysis.md`.
+
