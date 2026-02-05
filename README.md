@@ -18,6 +18,8 @@ This indicates a significant disconnect between high-level semantic reasoning an
 
 ### Diffusion Policy (2023): Smooth and Contact-Rich Action Execution
 
+
+
 ### RT-2 (2023): Semantic and Task-Level Generalization
 
 RT-2 demonstrates that large-scale vision-language models can be directly adapted to robotic control, enabling a single policy to perform a wide range of manipulation tasks specified through natural language. By leveraging semantic knowledge acquired from web-scale pretraining, RT-2 achieves strong task-level generalization without explicit task-specific pipelines.
@@ -53,10 +55,18 @@ When looked at as a whole, something stands out. Most efforts focus on just one 
 
 ## Open Problem
 
-How can a robotic manipulation system simultaneously achieve:
-(1) semantic task understanding,
-(2) object-level physical generalization,
-and (3) stable long-horizon execution under partial observability?
+Despite recent progress in vision-language models, object-centric representations, and learning-based control, robotic manipulation systems still struggle with long-horizon tasks in real-world settings. Most existing approaches handle reasoning, perception, and control as largely separate problems, which works for short and well-structured tasks but breaks down as interactions become longer and more complex.
 
-Existing approaches address these dimensions in isolation, but integrating them into a single architecture remains an open challenge, particularly in contact-rich and real-world settings where errors accumulate over time.
+In contact-rich environments, small errors in perception or execution tend to accumulate over time, especially under partial observability. Systems that reason well often lack physical grounding, while those that execute stable motions typically operate without a strong understanding of task semantics or object relationships.
+
+The open problem is how to design a manipulation system that can maintain coherent task-level reasoning while staying physically grounded and stable throughout extended sequences of actions, rather than succeeding only at isolated skills.
+
+
+## Research Hypothesis
+
+A more robust approach to long-horizon manipulation may emerge from combining three complementary ideas. High-level vision-language reasoning can help a robot understand what needs to be done and break complex tasks into meaningful steps. Object-centric geometric representations can anchor these decisions in the physical structure of the environment, making actions more consistent with real-world interactions. Diffusion-based control, in turn, can shape low-level motions into smooth and stable trajectories over time.
+
+When these components are allowed to interact, the system is less likely to accumulate small execution errors that typically derail long tasks. Such an integration could lead to more stable behavior under uncertainty, especially in contact-rich and partially observed settings where both reasoning and precise control are required.
+
+
 
