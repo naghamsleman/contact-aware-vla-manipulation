@@ -42,3 +42,21 @@ Diffusion Policy models manipulation as a trajectory generation problem, using d
 
 Nevertheless, Diffusion Policy operates primarily at the low-level control layer and lacks semantic reasoning or task-level planning. Without hierarchical structure or explicit feedback-driven replanning, its generalization to long-horizon tasks and novel environments remains limited.
 
+## Comparative Insight
+Even though the analyzed studies cover separate pieces of how robots grasp objects, there is no single method that handles complex scenarios - especially when objects move, touch each other, and appear in unpredictable settings.
+
+Though built for vision tasks, CogACT leans too heavily on unseen physical cues. RT-2 handles meaning and actions better after extensive learning across images and text. Over months, its steps drift slightly, losing precision. Yet it lacks direct interaction practice in design. What helps CogACT falter is also what it fails to make explicit.
+
+OmniManip looks at objects in a more detailed way, helping it work better with different shapes. Still, fixing on geometry means less room to interpret what things mean. It also needs clear object detection to function well. On the flip side, the Diffusion Policy handles step-by-step actions by producing flowing, consistent paths. Yet, those paths come without deeper understanding or changing plans mid-task.
+
+When looked at as a whole, something stands out. Most efforts focus on just one type of task - like understanding language, making broad predictions about things, or adjusting small actions. Yet hardly any attempt to bring these pieces together into a single system. That kind of setup would allow robots to plan ahead, respond physically, and adapt across time.
+
+## Open Problem
+
+How can a robotic manipulation system simultaneously achieve:
+(1) semantic task understanding,
+(2) object-level physical generalization,
+and (3) stable long-horizon execution under partial observability?
+
+Existing approaches address these dimensions in isolation, but integrating them into a single architecture remains an open challenge, particularly in contact-rich and real-world settings where errors accumulate over time.
+
