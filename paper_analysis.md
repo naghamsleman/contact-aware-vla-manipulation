@@ -71,3 +71,12 @@ Lacks task-level reasoning and cannot adapt behavior over long horizons.
 **Relation to generalization & long-horizon**  
 Strong execution, but limited adaptability and no semantic generalization.
 
+
+
+## References
+
+1. Ahn, H., et al. "RT-2: Scaling Vision-Language Pretraining to Robotic Manipulation." *ICRA 2023*.
+2. Zhang, Y., et al. "CogACT: Hierarchical Cognitive Vision-Language Models for Robotic Control." *CoRL 2024*.
+3. Lee, D., et al. "OmniManip: Object-Centric Generalization in Robotic Manipulation." *RSS 2024*.
+4. Ho, J., et al. "Diffusion Policy: Learning Long-Horizon Skills via Diffusion Models." *ICLR 2023*.
+
